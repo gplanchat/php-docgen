@@ -20,6 +20,6 @@ $ ln -s /opt/php-docgen/bin/docgen /usr/local/bin
 
 For example, to generate `php-docgen`'s documentation, I use :
 
-```$ docgen Gpanchat\\Docgen ../docs/ Gplanchat\\Docgen```
+```$ docgen Gpanchat\\Docgen ../docs/ Gplanchat/Docgen/```
 
 

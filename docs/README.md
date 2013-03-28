@@ -5,31 +5,31 @@ Component Gplanchat\Docgen
 
 ## Files
 
-* ../src\Gplanchat\Docgen\AbstractCallableEntry.php
-* ../src\Gplanchat\Docgen\ClassAwareTrait.php
-* ../src\Gplanchat\Docgen\ClassEntry.php
-* ../src\Gplanchat\Docgen\ComponentEntry.php
-* ../src\Gplanchat\Docgen\ConstantAwareTrait.php
-* ../src\Gplanchat\Docgen\ConstantEntry.php
-* ../src\Gplanchat\Docgen\EntryInterface.php
-* ../src\Gplanchat\Docgen\EntryTrait.php
-* ../src\Gplanchat\Docgen\FileAwareTrait.php
-* ../src\Gplanchat\Docgen\FileEntry.php
-* ../src\Gplanchat\Docgen\FunctionAwareTrait.php
-* ../src\Gplanchat\Docgen\FunctionEntry.php
-* ../src\Gplanchat\Docgen\MethodAwareTrait.php
-* ../src\Gplanchat\Docgen\MethodEntry.php
-* ../src\Gplanchat\Docgen\NamespaceAwareTrait.php
-* ../src\Gplanchat\Docgen\NamespaceEntry.php
-* ../src\Gplanchat\Docgen\ParameterAwareTrait.php
-* ../src\Gplanchat\Docgen\ParameterEntry.php
-* ../src\Gplanchat\Docgen\PhpDoc\Parser.php
-* ../src\Gplanchat\Docgen\Writer\Markdown\ClassWriter.php
-* ../src\Gplanchat\Docgen\Writer\Markdown\ComponentWriter.php
-* ../src\Gplanchat\Docgen\Writer\Markdown\ConstantWriter.php
-* ../src\Gplanchat\Docgen\Writer\Markdown\MethodWriter.php
-* ../src\Gplanchat\Docgen\Writer\Markdown\NamespaceWriter.php
-* ../src\Gplanchat\Docgen\Writer\Markdown\ParameterWriter.php
+* Gplanchat/Docgen/AbstractCallableEntry.php
+* Gplanchat/Docgen/ClassAwareTrait.php
+* Gplanchat/Docgen/ClassEntry.php
+* Gplanchat/Docgen/ComponentEntry.php
+* Gplanchat/Docgen/ConstantAwareTrait.php
+* Gplanchat/Docgen/ConstantEntry.php
+* Gplanchat/Docgen/EntryInterface.php
+* Gplanchat/Docgen/EntryTrait.php
+* Gplanchat/Docgen/FileAwareTrait.php
+* Gplanchat/Docgen/FileEntry.php
+* Gplanchat/Docgen/FunctionAwareTrait.php
+* Gplanchat/Docgen/FunctionEntry.php
+* Gplanchat/Docgen/MethodAwareTrait.php
+* Gplanchat/Docgen/MethodEntry.php
+* Gplanchat/Docgen/NamespaceAwareTrait.php
+* Gplanchat/Docgen/NamespaceEntry.php
+* Gplanchat/Docgen/ParameterAwareTrait.php
+* Gplanchat/Docgen/ParameterEntry.php
+* Gplanchat/Docgen/PhpDoc/Parser.php
+* Gplanchat/Docgen/Writer/Markdown/ClassWriter.php
+* Gplanchat/Docgen/Writer/Markdown/ComponentWriter.php
+* Gplanchat/Docgen/Writer/Markdown/ConstantWriter.php
+* Gplanchat/Docgen/Writer/Markdown/MethodWriter.php
+* Gplanchat/Docgen/Writer/Markdown/NamespaceWriter.php
+* Gplanchat/Docgen/Writer/Markdown/ParameterWriter.php
 
 
 ## Documentation

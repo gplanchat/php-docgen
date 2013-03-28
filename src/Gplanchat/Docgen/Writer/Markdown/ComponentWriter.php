@@ -32,7 +32,8 @@ TITLE_EOF;
                 $buffer .= "## Files\n\n";
                 foreach ($fileList as $fileEntry) {
                     /** @var Docgen\FileEntry $fileEntry */
-                    $buffer .= "* {$fileEntry->getName()}\n";
+                    $filename = str_replace(DIRECTORY_SEPARATOR, '/', $fileEntry->getName());
+                    $buffer .= "* {$filename}\n";
                 }
                 $buffer .= "\n\n";
             }

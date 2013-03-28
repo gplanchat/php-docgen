@@ -24,7 +24,7 @@ TITLE_EOF;
         } else {
             $dashes = str_pad('', $currentLevel, '#', \STR_PAD_RIGHT);
             $buffer = <<<TITLE_EOF
-{$titleLine}
+{$dashes} {$titleLine}
 
 {$namespaceEntry->getDescription()}
 \n

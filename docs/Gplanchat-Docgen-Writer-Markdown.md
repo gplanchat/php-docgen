@@ -7,166 +7,162 @@ Namespace `Gplanchat\Docgen\Writer\Markdown`
 
 ### Class `ClassWriter`
 
-_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-classwriter)
+_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [» Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-classwriter)
 
 
 
 #### Method `export`
 
-Parameter `classEntry`
 
+
+##### Parameter `classEntry`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ClassWriter
 * *is nullable* : No
 
 
-Parameter `currentLevel`
-
+##### Parameter `currentLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ClassWriter
 * *is nullable* : Yes
 * *default value* : `1`
 
-Parameter `maxLevel`
 
+##### Parameter `maxLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ClassWriter
 * *is nullable* : Yes
 * *default value* : `5`
-
 
 
 
 
 ### Class `ComponentWriter`
 
-_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-componentwriter)
+_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [» Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-componentwriter)
 
 
 
 #### Method `export`
 
-Parameter `componentEntry`
 
+
+##### Parameter `componentEntry`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ComponentWriter
 * *is nullable* : No
 
 
-Parameter `currentLevel`
-
+##### Parameter `currentLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ComponentWriter
 * *is nullable* : Yes
 * *default value* : `1`
 
-Parameter `maxLevel`
 
+##### Parameter `maxLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ComponentWriter
 * *is nullable* : Yes
 * *default value* : `5`
-
 
 
 
 
 ### Class `ConstantWriter`
 
-_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-constantwriter)
+_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [» Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-constantwriter)
 
 
 
 #### Method `export`
 
-Parameter `constantEntry`
 
+
+##### Parameter `constantEntry`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ConstantWriter
 * *is nullable* : No
 
 
-Parameter `currentLevel`
-
+##### Parameter `currentLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ConstantWriter
 * *is nullable* : Yes
 * *default value* : `1`
-
 
 
 
 
 ### Class `MethodWriter`
 
-_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-methodwriter)
+_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [» Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-methodwriter)
 
 
 
 #### Method `export`
 
-Parameter `methodEntry`
 
+
+##### Parameter `methodEntry`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\MethodWriter
 * *is nullable* : No
 
 
-Parameter `currentLevel`
-
+##### Parameter `currentLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\MethodWriter
 * *is nullable* : Yes
 * *default value* : `1`
 
-Parameter `maxLevel`
 
+##### Parameter `maxLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\MethodWriter
 * *is nullable* : Yes
 * *default value* : `5`
-
 
 
 
 
 ### Class `NamespaceWriter`
 
-_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-namespacewriter)
+_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [» Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-namespacewriter)
 
 
 
 #### Method `export`
 
-Parameter `namespaceEntry`
 
+
+##### Parameter `namespaceEntry`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\NamespaceWriter
 * *is nullable* : No
 
 
-Parameter `currentLevel`
-
+##### Parameter `currentLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\NamespaceWriter
 * *is nullable* : Yes
 * *default value* : `1`
 
-Parameter `maxLevel`
 
+##### Parameter `maxLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\NamespaceWriter
@@ -176,25 +172,24 @@ Parameter `maxLevel`
 
 
 
-
 ### Class `ParameterWriter`
 
-_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-parameterwriter)
+_Declared in namespace `Gplanchat\Docgen\Writer\Markdown`_ [» Read the docs](Gplanchat-Docgen-Writer-Markdown.md#class-parameterwriter)
 
 
 
 #### Method `export`
 
-Parameter `parameterEntry`
 
+
+##### Parameter `parameterEntry`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ParameterWriter
 * *is nullable* : No
 
 
-Parameter `currentLevel`
-
+##### Parameter `currentLevel`
 
 
 * *type* : Gplanchat\Docgen\Writer\Markdown\ParameterWriter
@@ -205,3 +200,5 @@ Parameter `currentLevel`
 
 
 
+
+[These docs are proudly built by Docgen](https://github.com/gplanchat/php-docgen)

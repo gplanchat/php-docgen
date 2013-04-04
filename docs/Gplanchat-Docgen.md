@@ -7,9 +7,9 @@ Namespace `Gplanchat\Docgen`
 
 ### Class `AbstractCallableEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-abstractcallableentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-abstractcallableentry)
 
- Base class for callable entries (methods and functions). 
+Base class for callable entries (methods and functions).
 
 #### Implemented Interfaces
 
@@ -24,30 +24,42 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `setReturnType`
 
- Define the callable return type Parameter `returnType`
+Defines the callable's return type
 
+##### Parameter `returnType`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getReturnType`
 
- Get the callable return type #### Method `__construct`
+Get the callable's return type
 
-Parameter `name`
+#### Method `parse`
 
+
+
+##### Parameter `re`
+
+
+* *type* : Gplanchat\Docgen\AbstractCallableEntry
+* *is nullable* : No
+
+
+#### Method `__construct`
+
+
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
@@ -55,116 +67,118 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
 * *is nullable* : No
 
 
-
-
 #### Method `setParameters`
 
-Parameter `parameters`
 
+
+##### Parameter `parameters`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addParameter`
 
-Parameter `parameterEntry`
 
+
+##### Parameter `parameterEntry`
 
 
 * *type* : Gplanchat\Docgen\AbstractCallableEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getParameters`
 
 
 
+
+
 ### Trait `ClassAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-classawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-classawaretrait)
 
-
+Trait designed for entries containing classes
 
 #### Method `setClasses`
 
-Parameter `classes`
+Define a new class entries list
 
+##### Parameter `classes`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addClass`
 
-Parameter `classEntry`
+Add a new class entry to the list
 
+##### Parameter `classEntry`
 
 
 * *type* : Gplanchat\Docgen\ClassAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getClasses`
+
+Get all class entries in the list
 
 
 
 ### Class `ClassEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-classentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-classentry)
 
-
+Class entry manager. Handles every class's element delcaration.
 
 #### Implemented Interfaces
 
@@ -181,120 +195,121 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `setType`
 
-Parameter `type`
+Define the class entry type
 
+##### Parameter `type`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getType`
 
+Get the class entry type
+
 #### Method `setParentClass`
 
-Parameter `parentClass`
+Define the parent class' name
 
+##### Parameter `parentClass`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getParentClass`
 
+Get the parent class' name
+
 #### Method `setParentInterfaces`
 
-Parameter `parentInterfaces`
+Define the parent interfaces names list
 
+##### Parameter `parentInterfaces`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addParentInterface`
 
-Parameter `parentInterface`
+Add a parent interface name to the list
 
+##### Parameter `parentInterface`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getParentInterfaces`
 
+Get the parent interfaces names list
+
 #### Method `setUsedTraits`
 
-Parameter `usedTraits`
+Define the used traits names list
 
+##### Parameter `usedTraits`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addUsedTrait`
 
-Parameter `usedTrait`
+Add an used trait name to the list
 
+##### Parameter `usedTrait`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getUsedTraits`
 
+Get the used traits names list
+
 #### Method `parse`
 
- Parameter `re`
+Parse class's definition by reflection
 
+##### Parameter `re`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
 * *default value* : `NULL`
-
 
 
 #### Method `parseMethodDeclaration`
 
-Parameter `methodDeclaration`
+Parse DocBlock method declaration (for virtual methods using __call() magic)
 
+##### Parameter `methodDeclaration`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
@@ -302,134 +317,136 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : No
-
-
 
 
 #### Method `setConstants`
 
-Parameter `constants`
 
+
+##### Parameter `constants`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addConstant`
 
-Parameter `constantEntry`
 
+
+##### Parameter `constantEntry`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getConstants`
 
+
+
 #### Method `setParameters`
 
-Parameter `parameters`
 
+
+##### Parameter `parameters`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addParameter`
 
-Parameter `parameterEntry`
 
+
+##### Parameter `parameterEntry`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : No
 
 
-
-
 #### Method `getParameters`
+
+
 
 #### Method `setMethods`
 
-Parameter `methods`
 
+
+##### Parameter `methods`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addMethod`
 
-Parameter `methodEntry`
 
+
+##### Parameter `methodEntry`
 
 
 * *type* : Gplanchat\Docgen\ClassEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getMethods`
 
 
 
+
+
 ### Class `ComponentEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-componententry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-componententry)
 
-
+Component entry manager. A component is a group of namespaces and/or classes and/or functions grouped as a whole that builds a feature. Class ComponentEntry
 
 #### Implemented Interfaces
 
@@ -448,28 +465,27 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `parse`
 
-Parameter `sourcePath`
+Parse a directory path, searching for
 
+##### Parameter `sourcePath`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
@@ -477,266 +493,264 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getParentEntry`
 
+
+
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : No
-
-
 
 
 #### Method `setFiles`
 
-Parameter `files`
 
+
+##### Parameter `files`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addFile`
 
-Parameter `fileEntry`
 
+
+##### Parameter `fileEntry`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getFiles`
 
+
+
 #### Method `hasFile`
 
-Parameter `fileName`
 
+
+##### Parameter `fileName`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getFile`
 
-Parameter `fileName`
 
+
+##### Parameter `fileName`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `setNamespaces`
 
-Parameter `namespaces`
 
+
+##### Parameter `namespaces`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addNamespace`
 
-Parameter `namespaceEntry`
 
+
+##### Parameter `namespaceEntry`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getNamespaces`
 
+
+
 #### Method `hasNamespace`
 
-Parameter `namespaceName`
 
+
+##### Parameter `namespaceName`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getNamespace`
 
-Parameter `namespaceName`
 
+
+##### Parameter `namespaceName`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `setClasses`
 
-Parameter `classes`
+Define a new class entries list
 
+##### Parameter `classes`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addClass`
 
-Parameter `classEntry`
+Add a new class entry to the list
 
+##### Parameter `classEntry`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getClasses`
 
+Get all class entries in the list
+
 #### Method `setConstants`
 
-Parameter `constants`
 
+
+##### Parameter `constants`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addConstant`
 
-Parameter `constantEntry`
 
+
+##### Parameter `constantEntry`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : No
 
 
-
-
 #### Method `getConstants`
+
+
 
 #### Method `setFunctions`
 
-Parameter `functions`
 
+
+##### Parameter `functions`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addFunction`
 
-Parameter `functionEntry`
 
+
+##### Parameter `functionEntry`
 
 
 * *type* : Gplanchat\Docgen\ComponentEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getFunctions`
 
 
 
+
+
 ### Trait `ConstantAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-constantawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-constantawaretrait)
 
 
 
 #### Method `setConstants`
 
-Parameter `constants`
 
+
+##### Parameter `constants`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addConstant`
 
-Parameter `constantEntry`
 
+
+##### Parameter `constantEntry`
 
 
 * *type* : Gplanchat\Docgen\ConstantAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getConstants`
+
+
 
 
 
 ### Class `ConstantEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-constantentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-constantentry)
 
 
 
@@ -752,30 +766,31 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `setValue`
 
-Parameter `value`
 
+
+##### Parameter `value`
 
 
 * *type* : Gplanchat\Docgen\ConstantEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getValue`
 
+
+
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ConstantEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\ConstantEntry
@@ -783,69 +798,71 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ConstantEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\ConstantEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\ConstantEntry
 * *is nullable* : No
-
-
 
 
 
 
 ### Interface `EntryInterface`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#interface-entryinterface)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#interface-entryinterface)
 
 
 
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\EntryInterface
 * *is nullable* : Yes
 
 
-Parameter `parent`
-
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\EntryInterface
@@ -853,69 +870,71 @@ Parameter `parent`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\EntryInterface
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\EntryInterface
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\EntryInterface
 * *is nullable* : No
-
-
 
 
 
 
 ### Trait `EntryTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-entrytrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-entrytrait)
 
 
 
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\EntryTrait
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\EntryTrait
@@ -923,46 +942,271 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\EntryTrait
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\EntryTrait
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\EntryTrait
 * *is nullable* : No
 
+
+
+
+### Class `ExtensionEntry`
+
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-extensionentry)
+
+Extension entry manager.
+
+#### Implemented Interfaces
+
+* `Gplanchat\Docgen\EntryInterface`
+
+
+#### Used Traits
+
+* `Gplanchat\Docgen\EntryTrait`
+* `Gplanchat\Docgen\NamespaceAwareTrait`
+* `Gplanchat\Docgen\ClassAwareTrait`
+* `Gplanchat\Docgen\ConstantAwareTrait`
+* `Gplanchat\Docgen\FunctionAwareTrait`
+
+
+#### Method `parse`
+
+Generate documentation for a PHP native extension
+
+##### Parameter `re`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : No
+
+
+#### Method `__construct`
+
+
+
+##### Parameter `name`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : Yes
+
+
+##### Parameter `parentEntry`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : Yes
+* *default value* : `NULL`
+
+
+#### Method `getName`
+
+
+
+#### Method `setName`
+
+
+
+##### Parameter `name`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : Yes
+
+
+#### Method `getDescription`
+
+
+
+#### Method `setDescription`
+
+
+
+##### Parameter `description`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : Yes
+
+
+#### Method `getParentEntry`
+
+
+
+#### Method `setParentEntry`
+
+
+
+##### Parameter `parent`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : No
+
+
+#### Method `setNamespaces`
+
+
+
+##### Parameter `namespaces`
+
+
+* *type* : array
+* *is nullable* : No
+
+
+#### Method `addNamespace`
+
+
+
+##### Parameter `namespaceEntry`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : No
+
+
+#### Method `getNamespaces`
+
+
+
+#### Method `hasNamespace`
+
+
+
+##### Parameter `namespaceName`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : Yes
+
+
+#### Method `getNamespace`
+
+
+
+##### Parameter `namespaceName`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : Yes
+
+
+#### Method `setClasses`
+
+Define a new class entries list
+
+##### Parameter `classes`
+
+
+* *type* : array
+* *is nullable* : No
+
+
+#### Method `addClass`
+
+Add a new class entry to the list
+
+##### Parameter `classEntry`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : No
+
+
+#### Method `getClasses`
+
+Get all class entries in the list
+
+#### Method `setConstants`
+
+
+
+##### Parameter `constants`
+
+
+* *type* : array
+* *is nullable* : No
+
+
+#### Method `addConstant`
+
+
+
+##### Parameter `constantEntry`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : No
+
+
+#### Method `getConstants`
+
+
+
+#### Method `setFunctions`
+
+
+
+##### Parameter `functions`
+
+
+* *type* : array
+* *is nullable* : No
+
+
+#### Method `addFunction`
+
+
+
+##### Parameter `functionEntry`
+
+
+* *type* : Gplanchat\Docgen\ExtensionEntry
+* *is nullable* : No
+
+
+#### Method `getFunctions`
 
 
 
@@ -970,65 +1214,63 @@ Parameter `parent`
 
 ### Trait `FileAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-fileawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-fileawaretrait)
 
 
 
 #### Method `setFiles`
 
-Parameter `files`
 
+
+##### Parameter `files`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addFile`
 
-Parameter `fileEntry`
 
+
+##### Parameter `fileEntry`
 
 
 * *type* : Gplanchat\Docgen\FileAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getFiles`
+
+
 
 #### Method `hasFile`
 
-Parameter `fileName`
 
+
+##### Parameter `fileName`
 
 
 * *type* : Gplanchat\Docgen\FileAwareTrait
 * *is nullable* : Yes
-
-
 
 
 #### Method `getFile`
 
-Parameter `fileName`
 
+
+##### Parameter `fileName`
 
 
 * *type* : Gplanchat\Docgen\FileAwareTrait
 * *is nullable* : Yes
-
-
 
 
 
 
 ### Class `FileEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-fileentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-fileentry)
 
 
 
@@ -1048,18 +1290,20 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `parse`
 
+
+
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
@@ -1067,216 +1311,216 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getParentEntry`
 
+
+
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : No
-
-
 
 
 #### Method `setNamespaces`
 
-Parameter `namespaces`
 
+
+##### Parameter `namespaces`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addNamespace`
 
-Parameter `namespaceEntry`
 
+
+##### Parameter `namespaceEntry`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getNamespaces`
 
+
+
 #### Method `hasNamespace`
 
-Parameter `namespaceName`
 
+
+##### Parameter `namespaceName`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getNamespace`
 
-Parameter `namespaceName`
 
+
+##### Parameter `namespaceName`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `setClasses`
 
-Parameter `classes`
+Define a new class entries list
 
+##### Parameter `classes`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addClass`
 
-Parameter `classEntry`
+Add a new class entry to the list
 
+##### Parameter `classEntry`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getClasses`
 
+Get all class entries in the list
+
 #### Method `setConstants`
 
-Parameter `constants`
 
+
+##### Parameter `constants`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addConstant`
 
-Parameter `constantEntry`
 
+
+##### Parameter `constantEntry`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : No
 
 
-
-
 #### Method `getConstants`
+
+
 
 #### Method `setFunctions`
 
-Parameter `functions`
 
+
+##### Parameter `functions`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addFunction`
 
-Parameter `functionEntry`
 
+
+##### Parameter `functionEntry`
 
 
 * *type* : Gplanchat\Docgen\FileEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getFunctions`
 
 
 
+
+
 ### Trait `FunctionAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-functionawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-functionawaretrait)
 
 
 
 #### Method `setFunctions`
 
-Parameter `functions`
 
+
+##### Parameter `functions`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addFunction`
 
-Parameter `functionEntry`
 
+
+##### Parameter `functionEntry`
 
 
 * *type* : Gplanchat\Docgen\FunctionAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getFunctions`
+
+
 
 
 
 ### Class `FunctionEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-functionentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-functionentry)
 
 
 
@@ -1285,57 +1529,43 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 * `Gplanchat\Docgen\EntryInterface`
 
 
-#### Method `parse`
-
-Parameter `re`
-
-
-
-* *type* : Gplanchat\Docgen\FunctionEntry
-* *is nullable* : No
-
-
-
-
-
-
 ### Trait `MethodAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-methodawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-methodawaretrait)
 
 
 
 #### Method `setMethods`
 
-Parameter `methods`
 
+
+##### Parameter `methods`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addMethod`
 
-Parameter `methodEntry`
 
+
+##### Parameter `methodEntry`
 
 
 * *type* : Gplanchat\Docgen\MethodAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getMethods`
+
+
 
 
 
 ### Class `MethodEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-methodentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-methodentry)
 
 
 
@@ -1344,81 +1574,65 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 * `Gplanchat\Docgen\EntryInterface`
 
 
-#### Method `parse`
-
-Parameter `re`
-
-
-
-* *type* : Gplanchat\Docgen\MethodEntry
-* *is nullable* : No
-
-
-
-
-
-
 ### Trait `NamespaceAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-namespaceawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-namespaceawaretrait)
 
 
 
 #### Method `setNamespaces`
 
-Parameter `namespaces`
 
+
+##### Parameter `namespaces`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addNamespace`
 
-Parameter `namespaceEntry`
 
+
+##### Parameter `namespaceEntry`
 
 
 * *type* : Gplanchat\Docgen\NamespaceAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getNamespaces`
+
+
 
 #### Method `hasNamespace`
 
-Parameter `namespaceName`
 
+
+##### Parameter `namespaceName`
 
 
 * *type* : Gplanchat\Docgen\NamespaceAwareTrait
 * *is nullable* : Yes
-
-
 
 
 #### Method `getNamespace`
 
-Parameter `namespaceName`
 
+
+##### Parameter `namespaceName`
 
 
 * *type* : Gplanchat\Docgen\NamespaceAwareTrait
 * *is nullable* : Yes
-
-
 
 
 
 
 ### Class `NamespaceEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-namespaceentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-namespaceentry)
 
 
 
@@ -1437,16 +1651,16 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
@@ -1454,166 +1668,168 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : No
-
-
 
 
 #### Method `setClasses`
 
-Parameter `classes`
+Define a new class entries list
 
+##### Parameter `classes`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addClass`
 
-Parameter `classEntry`
+Add a new class entry to the list
 
+##### Parameter `classEntry`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getClasses`
 
+Get all class entries in the list
+
 #### Method `setConstants`
 
-Parameter `constants`
 
+
+##### Parameter `constants`
 
 
 * *type* : array
 * *is nullable* : No
-
-
 
 
 #### Method `addConstant`
 
-Parameter `constantEntry`
 
+
+##### Parameter `constantEntry`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : No
 
 
-
-
 #### Method `getConstants`
+
+
 
 #### Method `setFunctions`
 
-Parameter `functions`
 
+
+##### Parameter `functions`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addFunction`
 
-Parameter `functionEntry`
 
+
+##### Parameter `functionEntry`
 
 
 * *type* : Gplanchat\Docgen\NamespaceEntry
 * *is nullable* : No
-
-
 
 
 #### Method `getFunctions`
 
 
 
+
+
 ### Trait `ParameterAwareTrait`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#trait-parameterawaretrait)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#trait-parameterawaretrait)
 
 
 
 #### Method `setParameters`
 
-Parameter `parameters`
 
+
+##### Parameter `parameters`
 
 
 * *type* : array
 * *is nullable* : No
 
 
-
-
 #### Method `addParameter`
 
-Parameter `parameterEntry`
 
+
+##### Parameter `parameterEntry`
 
 
 * *type* : Gplanchat\Docgen\ParameterAwareTrait
 * *is nullable* : No
 
 
-
-
 #### Method `getParameters`
+
+
 
 
 
 ### Class `ParameterEntry`
 
-_Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#class-parameterentry)
+_Declared in namespace `Gplanchat\Docgen`_ [» Read the docs](Gplanchat-Docgen.md#class-parameterentry)
 
 
 
@@ -1629,88 +1845,95 @@ _Declared in namespace `Gplanchat\Docgen`_ [Read the docs](Gplanchat-Docgen.md#c
 
 #### Method `setDefaultValue`
 
-Parameter `defaultValue`
 
+
+##### Parameter `defaultValue`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDefaultValue`
 
+
+
 #### Method `hasDefaultValue`
+
+
 
 #### Method `unsetDefaultValue`
 
+
+
 #### Method `setDefaultValueConstant`
 
-Parameter `defaultValueConstant`
 
+
+##### Parameter `defaultValueConstant`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDefaultValueConstant`
 
+
+
 #### Method `setType`
 
-Parameter `type`
 
+
+##### Parameter `type`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getType`
 
+
+
 #### Method `setIsNullable`
 
-Parameter `isNullable`
 
+
+##### Parameter `isNullable`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `getIsNullable`
+
+
 
 #### Method `parse`
 
-Parameter `re`
 
+
+##### Parameter `re`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : No
 
 
-
-
 #### Method `__construct`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
 
 
-Parameter `parentEntry`
-
+##### Parameter `parentEntry`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
@@ -1718,41 +1941,45 @@ Parameter `parentEntry`
 * *default value* : `NULL`
 
 
-
 #### Method `getName`
+
+
 
 #### Method `setName`
 
-Parameter `name`
 
+
+##### Parameter `name`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
-
-
 
 
 #### Method `getDescription`
 
+
+
 #### Method `setDescription`
 
-Parameter `description`
 
+
+##### Parameter `description`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
 * *is nullable* : Yes
 
 
-
-
 #### Method `getParentEntry`
+
+
 
 #### Method `setParentEntry`
 
-Parameter `parent`
 
+
+##### Parameter `parent`
 
 
 * *type* : Gplanchat\Docgen\ParameterEntry
@@ -1763,3 +1990,4 @@ Parameter `parent`
 
 
 
+[These docs are proudly built by Docgen](https://github.com/gplanchat/php-docgen)

@@ -1,7 +1,32 @@
 <?php
+/**
+ * This file is part of Gplanchat\Docgen.
+ *
+ * Gplanchat\Docgen is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU LEsser General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Gplanchat\Docgen is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Gplanchat\Docgen.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Grégory PLANCHAT <g.planchat@gmail.com>
+ * @license Lesser General Public License v3 (http://www.gnu.org/licenses/lgpl-3.0.txt)
+ * @copyright Copyright (c) 2013 Grégory PLANCHAT (http://planchat.fr/)
+ */
 
 namespace Gplanchat\Docgen;
 
+/**
+ * Class entry manager. Handles every class's element delcaration.
+ *
+ * @package Gplanchat\Docgen
+ */
 class ClassEntry
     implements EntryInterface
 {
@@ -11,28 +36,61 @@ class ClassEntry
     use MethodAwareTrait;
 
     /**
+     * Parent class name
+     *
      * @var string|null
      */
     private $parentClass = null;
-    private $parentInterfaces = [];
-    private $usedTraits = [];
-    private $type = T_CLASS;
 
+    /**
+     * Parent interfaces names list
+     *
+     * @var array
+     */
+    private $parentInterfaces = [];
+
+    /**
+     * Used traits names list
+     *
+     * @var array
+     */
+    private $usedTraits = [];
+
+    /**
+     * Class entry type, is either *\T_CLASS*, *\T_TRAIT* or *\T_INTERFACE*.
+     *
+     * @var int
+     */
+    private $type = \T_CLASS;
+
+    /**
+     * Define the class entry type
+     *
+     * @param int $type
+     * @return $this
+     */
     public function setType($type)
     {
-        if (in_array($type, [T_CLASS, T_TRAIT, T_INTERFACE])) {
+        if (in_array($type, [\T_CLASS, \T_TRAIT, \T_INTERFACE])) {
             $this->type = $type;
         }
 
         return $this;
     }
 
+    /**
+     * Get the class entry type
+     *
+     * @return int
+     */
     public function getType()
     {
         return $this->type;
     }
 
     /**
+     * Define the parent class' name
+     *
      * @param string $parentClass
      * @return $this
      */
@@ -44,6 +102,8 @@ class ClassEntry
     }
 
     /**
+     * Get the parent class' name
+     *
      * @return string|null
      */
     public function getParentClass()
@@ -52,6 +112,8 @@ class ClassEntry
     }
 
     /**
+     * Define the parent interfaces names list
+     *
      * @param array $parentInterfaces
      * @return $this
      */
@@ -63,6 +125,8 @@ class ClassEntry
     }
 
     /**
+     * Add a parent interface name to the list
+     *
      * @param string $parentInterface
      * @return $this
      */
@@ -74,6 +138,8 @@ class ClassEntry
     }
 
     /**
+     * Get the parent interfaces names list
+     *
      * @return array
      */
     public function getParentInterfaces()
@@ -82,6 +148,8 @@ class ClassEntry
     }
 
     /**
+     * Define the used traits names list
+     *
      * @param array $usedTraits
      * @return $this
      */
@@ -93,6 +161,8 @@ class ClassEntry
     }
 
     /**
+     * Add an used trait name to the list
+     *
      * @param $usedTrait
      * @return $this
      */
@@ -104,6 +174,8 @@ class ClassEntry
     }
 
     /**
+     * Get the used traits names list
+     *
      * @return array
      */
     public function getUsedTraits()
@@ -112,7 +184,10 @@ class ClassEntry
     }
 
     /**
+     * Parse class's definition by reflection
      *
+     * @param \ReflectionClass $re
+     * @return $this
      */
     public function parse(\ReflectionClass $re = null)
     {
@@ -157,7 +232,7 @@ class ClassEntry
         }
 
         if (($docComment = $re->getDocComment()) !== false) {
-            $parser = new PhpDoc\Parser();
+            $parser = new DocBlock\Parser();
             $parser->parse($docComment);
 
             if (isset($parser['description'])) {
@@ -170,8 +245,16 @@ class ClassEntry
                 }
             }
         }
+
+        return $this;
     }
 
+    /**
+     * Parse DocBlock method declaration (for virtual methods using __call() magic)
+     *
+     * @param string $methodDeclaration
+     * @return MethodEntry
+     */
     public function parseMethodDeclaration($methodDeclaration)
     {
         $it = new \ArrayIterator(token_get_all('<?php ' . $methodDeclaration));

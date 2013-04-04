@@ -23,39 +23,47 @@
 namespace Gplanchat\Docgen;
 
 /**
- * Component entry manager. A component is a group of namespaces and/or
- * classes and/or functions grouped as a whole that builds a feature.
+ * Extension entry manager.
  *
- * Class ComponentEntry
  * @package Gplanchat\Docgen
  */
-class ComponentEntry
+class ExtensionEntry
     implements EntryInterface
 {
     use EntryTrait;
-    use FileAwareTrait;
     use NamespaceAwareTrait;
     use ClassAwareTrait;
     use ConstantAwareTrait;
     use FunctionAwareTrait;
 
     /**
-     * Parse a directory path, searching for
+     * Generate documentation for a PHP native extension
      *
-     * @param $sourcePath
+     * @param \ReflectionExtension $re
      * @return $this
      */
-    public function parse($sourcePath)
+    public function parse(\ReflectionExtension $re)
     {
-        $it = new \RecursiveDirectoryIterator($sourcePath, \RecursiveDirectoryIterator::KEY_AS_PATHNAME | \RecursiveDirectoryIterator::CURRENT_AS_SELF);
-        foreach (new \RecursiveIteratorIterator($it) as $path => $fsEntry) {
-            /** @var \SplFileInfo $fsEntry */
-            if ($fsEntry->isDir()) {
-                continue;
-            }
+        if ($re === null) {
+            $re = new \ReflectionExtension($this->getName());
+        }
 
-            $this->addFile($fileEntry = new FileEntry($path, $this));
-            $fileEntry->parse();
+        foreach ($re->getConstants() as $constantName => $constantValue) {
+            $constantEntry = new ConstantEntry($constantName, $this);
+            $constantEntry->setValue($constantValue);
+            $this->addConstant($constantEntry);
+        }
+
+        foreach ($re->getFunctions() as $function) {
+            $functionEntry = new FunctionEntry($function->getName(), $this);
+            $functionEntry->parse($function);
+            $this->addFunction($functionEntry);
+        }
+
+        foreach ($re->getClasses() as $class) {
+            $classEntry = new ClassEntry($class->getName(), $this);
+            $classEntry->parse($class);
+            $this->addFunction($classEntry);
         }
 
         return $this;
